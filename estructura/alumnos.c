@@ -5,6 +5,11 @@ Las almacene en un estructura y calcule el promedio de cada alumno.
 2- Posteriormente debes crear un archivo con la lista de estudiantes con sus respectivas
 notas y promedios. Se muestra ejemplo del archivo de salida:
 Alumno  Nota1   Nota2   Nota3   Nota4   Nota5   Promedio
+
+3.- Finalmente debes leer el archivo desde python y mostrar los siguientes resultados por pantalla
+    * Promedio General
+    * Promedio más alto
+    * Promedio más bajo
 */
 
 #include <stdio.h>
@@ -58,14 +63,14 @@ int main(){
     char linea[200] = "";
     char cadena[10];
 
-    strcat(linea,"Nombre Alumno\tNota1\tNota2\tNota3\tNota4\tNota5\tPromedio\n");
+    strcat(linea,"Alumno\tNota1\tNota2\tNota3\tNota4\tNota5\tPromedio\n");
     fputs(linea, archivo); //cabecera
     
     linea[0] = '\0';
     
     for (int i = 0; i < n; i++){
         strcat(linea, alumnos[i].nombre);
-        strcat(linea, "\t");
+        strcat(linea, "\t"); //separador tab
 
         for (int j = 0; j < 5; j++){
             sprintf(cadena, "%.2f", alumnos[i].notas[j]);
