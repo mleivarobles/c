@@ -1,5 +1,5 @@
 /*
-1.- Escribe un programa en C que lea las 5 calificaciones de 10 estudiantes. 
+1.- Escribe un programa en C que lea(teclado) las 5 calificaciones de 10 estudiantes. 
 Las almacene en un estructura y calcule el promedio de cada alumno.
 
 2- Posteriormente debes crear un archivo con la lista de estudiantes con sus respectivas
@@ -17,9 +17,11 @@ Alumno  Nota1   Nota2   Nota3   Nota4   Nota5   Promedio
 
 typedef struct alumno{
     char nombre[50]; //alumno
-    float notas[5]; //notas
+    float notas[5]; //notas n1= notas[0], n2= notas[1]...., n5= nota[4]
     float promedio; //promedio
 } Alumno;
+
+//
 
 int main(){
     Alumno alumnos[10];
