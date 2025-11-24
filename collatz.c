@@ -10,19 +10,9 @@ gcc -o collatz collatz.c
 
 #include <stdio.h>
 
-int main(void){
-
-    long long int n;
+void collatz(long long int n){
     int numeros[2] = {0};
 
-    printf("Ingresa un numero entero positivo n>0: ");
-    scanf(" %lld", &n);
-
-    if (n <= 0 ){
-        printf("Entrada invalida. Debes introducir un entero positivo.\n");
-        return 1;
-    }
-    
     while (n != 1){
         printf("%lld ", n);
 
@@ -37,4 +27,19 @@ int main(void){
     printf("1\n");
     printf("pares: %d\n", numeros[0]);
     printf("impares: %d\n", numeros[1]+1);
+}
+
+int main(void){
+
+    long long int n;
+    
+    printf("Ingresa un numero entero positivo n>0: ");
+    scanf(" %lld", &n);
+
+    if (n <= 0 ){
+        printf("Entrada invalida. Debes introducir un entero positivo.\n");
+        return 1;
+    }
+    collatz(n);
+    return 0;
 }
