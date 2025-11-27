@@ -16,7 +16,7 @@ with open("listado.txt", newline='', encoding="utf-8") as f:
             prom = float(fila[-1])  
             col_promedio.append(prom)
 
-print(col_promedio)
+print(f"Columna Promedio: {col_promedio}")
 
 min_pro = min(col_promedio)
 max_pro = max(col_promedio)
